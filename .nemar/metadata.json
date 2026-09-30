@@ -1,7 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "enriched",
+  "pipeline_stage": "validated",
   "title": "Healthy Brain Network (HBN) EEG - Release 8",
+  "description": "Release 8 of the HBN-EEG dataset, the EEG component of the Child Mind Institute Healthy Brain Network project, organized in BIDS format. It contains EEG recordings and behavioral responses from 257 children and young adults (ages 5-21) performing six passive and active tasks: resting state, surround suppression, movie watching, contrast change detection, sequence learning, and symbol search. Events carry Hierarchical Event Descriptor (HED) annotations, and the participants file includes CBCL-derived psychopathology factors and quality-control results.",
+  "methods_description": "EEG was recorded while participants completed six tasks (resting state, surround suppression, movie watching, contrast change detection, sequence learning, symbol search). Behavioral responses were merged into the events.tsv files with HED annotations. Minimal quality control checked for file corruption and the presence of required events for each task, with results stored in participants.tsv.",
   "license": "CC-BY-SA 4.0",
   "dataset_type": "raw",
   "authors": {
@@ -28,6 +30,29 @@
       "orcid": "0000-0002-9048-8438"
     }
   },
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "Healthy Brain Network"
+    },
+    {
+      "term": "pediatric mental health"
+    },
+    {
+      "term": "Hierarchical Event Descriptors"
+    },
+    {
+      "term": "resting state"
+    },
+    {
+      "term": "child and adolescent development"
+    },
+    {
+      "term": "BIDS"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds005512.v1.0.1",
@@ -37,7 +62,7 @@
     {
       "identifier": "10.1101/2024.10.03.615261",
       "identifier_type": "DOI",
-      "relation_type": "References"
+      "relation_type": "IsDescribedBy"
     },
     {
       "identifier": "10.1038/sdata.2017.181",
@@ -55,14 +80,9 @@
       "relation_type": "IsDescribedBy"
     },
     {
-      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=on005512",
+      "identifier": "https://nemar.org/dataset/on005512",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
-    },
-    {
-      "identifier": "10.82901/nemar.on005512",
-      "identifier_type": "DOI",
-      "relation_type": "IsIdenticalTo"
     }
   ],
   "funding_references": [
@@ -70,79 +90,25 @@
       "funder_name": "See https://childmind.org/science/global-open-science/healthy-brain-network/#donors"
     },
     {
-      "funder_name": "NIH",
+      "funder_name": "NIH/NIMH",
       "award_number": "R01MH125934",
       "award_title": "BIDS data preparation"
-    },
-    {
-      "funder_name": "Child Mind Institute"
     }
   ],
   "resource_type_general": "Dataset",
+  "resource_type_specific": "EEG Dataset",
   "modalities": [
     "eeg"
   ],
-  "resource_type_specific": "EEG Dataset",
-  "description": "The Healthy Brain Network (HBN) EEG Release 8 dataset comprises high-resolution electroencephalogram recordings from 257 children and adolescents (ages 5-21 years) performing six distinct cognitive and perceptual tasks, including resting state, passive viewing tasks (surround suppression, movie watching), and active tasks (contrast change detection, sequence learning, symbol search). The dataset includes behavioral responses, hierarchical event descriptors for systematic meta-analysis, and psychopathology measures derived from the Child Behavior Checklist, providing a rich resource for investigating neural correlates of typical and atypical development. This Release 8 represents a subset of the larger Healthy Brain Network project.",
-  "methods_description": "EEG data were collected during six tasks: three passive tasks (resting state with eyes open/closed, surround suppression with flashing peripheral disks, and movie watching) and three active tasks requiring participant responses (contrast change detection, sequence learning, and symbol search). Behavioral responses including reaction times and accuracy were recorded during task performance. Data quality control was performed to ensure data integrity, task event completeness, and preprocessing readiness.",
-  "keywords": [
-    {
-      "term": "EEG",
-      "subject_scheme": "MeSH"
-    },
-    {
-      "term": "child development",
-      "subject_scheme": "MeSH"
-    },
-    {
-      "term": "adolescent",
-      "subject_scheme": "MeSH"
-    },
-    {
-      "term": "cognitive tasks"
-    },
-    {
-      "term": "resting state"
-    },
-    {
-      "term": "event-related potentials",
-      "subject_scheme": "MeSH"
-    },
-    {
-      "term": "behavioral assessment",
-      "subject_scheme": "MeSH"
-    },
-    {
-      "term": "BIDS"
-    },
-    {
-      "term": "Healthy Brain Network"
-    },
-    {
-      "term": "HED annotations"
-    },
-    {
-      "term": "CBCL"
-    },
-    {
-      "term": "surround suppression"
-    },
-    {
-      "term": "contrast change detection"
-    },
-    {
-      "term": "sequence learning"
-    },
-    {
-      "term": "symbol search"
-    },
-    {
-      "term": "movie watching"
-    },
-    {
-      "term": "psychopathology",
-      "subject_scheme": "MeSH"
-    }
+  "sizes": [
+    "157 GB (2321 files)"
+  ],
+  "formats": [
+    ".json",
+    ".md",
+    ".set",
+    ".tsv",
+    ".yml"
   ],
   "source_hash": "9ab736fcfd166822afd28095d65c233e4d3c2700c96f92ff693d21dc9b4e09b8"
 }
